@@ -115,7 +115,6 @@
   img {
     max-width: 100%;
   }
-
   /* GRID */
 .container{
     max-width: 150rem;
@@ -125,7 +124,8 @@
 }
  /* HEADER */
  .header{
-    background:var(--dark);
+    background:transparent;
+    padding:2rem;
     position:relative;
     position:fixed;
     width:100%
@@ -198,7 +198,7 @@
 /* HEADER MOBILE */
 @media screen and (max-width:500px){
  .header__nav{
-  background:rgb(207, 116, 250);
+  background:var(--dark);
   position:absolute;
   top:0rem;
   /* left:0rem; */
@@ -234,6 +234,14 @@
  }
 }
 
+
+/* BANNER */
+.banner{
+  background-image:url("/img/banner_home_v1.jpg");
+  background-size:cover;
+  height:100vh;
+  background-position:center center;
+}
 
 /* REPEATABLE PATTERNS */
 :root{

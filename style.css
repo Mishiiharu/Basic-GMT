@@ -124,8 +124,8 @@
 }
  /* HEADER */
  .header{
-    background:transparent;
-    padding:2rem;
+    background:var(--primary);
+    padding:.2rem;
     position:relative;
     position:fixed;
     width:100%;
@@ -236,11 +236,6 @@
 }
 
 
-
-
-
-
-
 /* BANNER */
 .banner{
   background-image:url("/img/banner_home_v1.jpg");
@@ -306,6 +301,9 @@
   display:flex;
   gap:3rem;
 }
+
+
+
 @media screen and (max-width:500px){
   .banner__text h1{
     font-size:4rem;
@@ -335,6 +333,81 @@
     justify-content:center;
   } 
 }
+
+/* ANOTHER PAGE(HEADER 2) */
+/* OFFER */
+.offer{
+  height:100vh;
+  background-position:center center;
+  position:relative;
+  display:flex;
+  align-items:center;
+}
+.offer__text{
+  max-width:65rem;
+  display:flex;
+  flex-direction:column;
+  gap:4rem;
+}
+.offer__text ul.bon{
+  max-width:100rem;
+  display:flex;
+  gap:3rem;
+
+}
+.offer__text h2{
+  font-size:4rem;
+    font-weight:550;
+    color:var(--primary);
+}
+.offer__text p{
+  display:flex;
+  align-items:center;
+  gap:2rem;
+  color:var(--dark);
+  font-size:1.5rem;
+}
+.offer__price h3{
+  font-size:5rem;
+  color:orange;
+}
+.offer__price__bot h4{
+  font-size:5rem;
+  color:var(--primary)
+}
+
+@media screen and(max-width:500px){
+  .offer__text h2{
+    font-size:4rem;
+    align-items:center;
+    text-align:center;
+    justify-content:center;
+  }
+  .offer__text p{
+    font-size:1.5rem;
+    font-weight:600;
+    text-align:center;
+  }
+  .offer__text ul.bon{
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+   
+  }
+  .banner__text ul.bon li a{
+    width:100%;
+ }
+}
+
+
+/* .btn.bg--primary{
+  display:flex;
+  gap:3rem;
+} */
+
+
+
+
 
 /* REPEATABLE PATTERNS */
 :root{

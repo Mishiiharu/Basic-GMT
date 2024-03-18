@@ -196,6 +196,10 @@
   right:0rem;
   transition:.5s ease;
  }
+ .header{
+   transition:.5 ease;
+   display:block;
+ }
 /* HEADER MOBILE */
 @media screen and (max-width:500px){
  .header__nav{
@@ -303,7 +307,7 @@
 }
 
 
-
+/* BANNER MEDIA */
 @media screen and (max-width:500px){
   .banner__text h1{
     font-size:4rem;
@@ -334,16 +338,22 @@
   } 
 }
 
+
 /* ANOTHER PAGE(HEADER 2) */
 /* OFFER */
 .offer{
   background-color:rgb(248, 248, 248);
-  height:100vh;
+  height: 100vh;
   background-position:center center;
   position:relative;
   display:flex;
   align-items:center;
 }
+.offer__wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10rem;
+  }
 .offer__text{
   max-width:65rem;
   display:flex;
@@ -354,7 +364,6 @@
   max-width:100rem;
   display:flex;
   gap:3rem;
-
 }
 .offer__text h2{
   font-size:4rem;
@@ -364,20 +373,57 @@
 .offer__text p{
   display:flex;
   align-items:center;
-  gap:2rem;
+  gap:1.5rem;
   color:var(--dark);
   font-size:1.5rem;
+  font-weight:100;
 }
 .offer__price h3{
-  font-size:5rem;
+  font-size:4rem;
+  font-weight:400;
   color:orange;
 }
 .offer__price__bot h4{
   font-size:5rem;
   color:var(--primary)
 }
+.offer__text p{
+  margin-bottom: 2rem;
+  font-weight: 600;
+  text-align: justify;
+  max-width: 60rem;
+}
+.offer__price {
+  margin-top: 10rem;
+}
+.offer__price h2{
+  font-size: 3rem;
+  font-weight: 1000;
+  color: var(--primary);
+}
+.offer__price__bot{
+  display: flex;
+  color: var(--primary);
+  font-weight: 700;
+}
+.offer__price__bot h4{
+  font-size: 3rem;
+}
+.offer__price__bot h3{
+  font-size: 18rem;
+  margin-top: -6rem;
+}
+.offer__cents h4{
+  color:orange;
+}
+
 
 @media screen and (max-width:500px){
+  .offer__wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    }
   .offer__text h2{
     font-size:4rem;
     align-items:center;
@@ -391,6 +437,10 @@
   }
   .banner__text ul.bon li a{
     width:100%;
+ }
+ .offer__price{
+  margin: 0 auto;
+  margin-top: 10rem;
  }
 }
 
@@ -432,7 +482,11 @@
 .how__text p{
   color:var(--light);
 }
+.how__text ul.boon a{
+  padding: 5px 80px;
+}
 
+/* HOW MEDIA */
 @media screen and (max-width:500px){
   .how__ate{
     display:none;
@@ -444,43 +498,78 @@
     display:flex;
     align-items:center;
     justify-content:center;
+    text-align: center;
   }
   .how__text h2{
     text-align:center;
   }
   .how__text p{
-   
-  }
-}
-
-
-
-/* PLAN */
-.plan{
-  min-height:500px;
-  background-color:rgb(255, 252, 243);
-}
-.plan__text{
-  text-align:center;
-  display:flex;
+    max-width:65rem;
+    display:flex;
   align-items:center;
   justify-content:center;
   flex-direction:column;
   gap:2rem;
   max-width:75rem;
+  margin:0 auto;
+  }
+  .how__text ul.boon a{
+    justify-content:center;
+    align-items:center;
+    padding:5px 155px;
+}
+}
+
+
+/* PLAN */
+.plan{
+  min-height:500px;
+  background-color:rgb(255, 247, 238);
+  padding: 5rem 0;
+}
+.plan__text{
+  left: 600 ;
+  text-align:center;
   display:flex;
   align-items:center;
-  gap:2rem;
+  justify-content:center;
+  flex-direction:column;
+  gap:3rem;
+  max-width:75rem;
+  height:50vh;
+  margin: 0 auto;
 }
 .plan__text h2{
   color:var(--primary);
   font-size:3rem;
-  font-weight:550;
+  font-weight:580;
 }
 .plan__text a{
 border:2px solid var(--primary);
 }
-@media screen and (max-width:500px){}
+.plan__text ul.bun{
+  display:flex;
+  gap:3rem;
+}
+
+/* PLAN MEDIA */
+@media screen and (max-width:500px){
+  .plan__text{
+    height:40vh;
+  }
+  .plan__text ul.bun{
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+  }
+  .plan__text ul.bun li a{
+    width:80%;
+  }
+  .plan__text ul.bunt li a{
+    width:105%;
+    
+  }
+}
 
 
 
@@ -507,6 +596,7 @@ border:2px solid var(--primary);
   gap:2rem;
   max-width:75rem;
   margin:0 auto;
+  font-size: 1.5rem;
 }
 .foot__nav ul.brand{
   display:flex;
@@ -517,7 +607,15 @@ border:2px solid var(--primary);
   color:var(--light);
   font-size:3rem;
 }
+.foot__nav ul.navi{
+  display:flex;
+  gap:2rem;
+}
+.foot__nav ul.navi{
+  justify-content:center;
+}
 
+/* FOOTER MEDIA */
 @media screen and (max-width:500px){
   .foot__nav{
     display:flex;
@@ -528,6 +626,15 @@ border:2px solid var(--primary);
     max-width:75rem;
     margin:0 auto;
   }
+  .foot__nav ul.navi{
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+  }
+  .foot__nav{
+    height:50vh;
+    font-size: 1.5rem;
+  } 
 }
 
 

@@ -4,3 +4,9 @@ burgir.addEventListener("click", () =>{
     burgir.classList.toggle("open");
     hNav.classList.toggle("open");
 })
+const head = document.querySelector(".header__nav")
+const roll = document.querySelector(".header__nav")
+head.addEventListener("scroll", () =>{
+    burgir.classList.toggle("scroll");
+    hNav.classList.toggle("scroll");
+})
